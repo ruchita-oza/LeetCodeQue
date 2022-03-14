@@ -1,0 +1,13 @@
+/*Function to print level order traversal of tree*/
+printLevelorder(tree)
+for d = 1 to height(tree)
+   printCurrentLevel(tree, d);
+
+/*Function to print all nodes at a current level*/
+printCurrentLevel(tree, level)
+if tree is NULL then return;
+if level is 1, then
+    print(tree->data);
+else if level greater than 1, then
+    printCurrentLevel(tree->left, level-1);
+    printCurrentLevel(tree->right, level-1);
